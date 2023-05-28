@@ -1,0 +1,56 @@
+/*** Colours ***/
+
+$base-cyan: hsl(180, 66%, 49%);
+$base-dark-violet: hsl(257, 27%, 26%);
+
+$sec-red: hsl(0, 87%, 67%);
+
+$neu-gray: hsl(0, 0%, 75%);
+$neu-grayish-violet: hsl(257, 7%, 63%);
+$neu-very-blue: hsl(255, 11%, 22%);
+$neu-very-violet: hsl(260, 8%, 14%);
+
+/*** General ***/
+
+ul {
+  list-style-type: none;
+}
+
+a:link,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*** Header ***/
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  color: var(--neu-very-blue);
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+    
+    .nav-menu-items {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+
+    .auth-items {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
