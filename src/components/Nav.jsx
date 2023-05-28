@@ -1,6 +1,15 @@
 import logo from "../assets/logo.svg";
+import { Squash as Hamburger } from 'hamburger-react';
+import { useState } from "react";
+
 
 export default function Nav() {
+  const [isOpen, setOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setOpen(prev => !prev);
+  }
+
   return (
     <nav className="main-nav">
       <img src={logo} className="logo" />
@@ -19,6 +28,10 @@ export default function Nav() {
           <li>Sign Up</li>
         </ul>
       </div>
+
+      <Hamburger 
+        toggled={isOpen}
+        toggle={toggleMenu}/>
     </nav>
   );
 }
