@@ -67,13 +67,13 @@ button {
   display: flex;
   justify-content: space-between;
   font-weight: 600;
-  margin-top: 2rem;
   margin: auto;
+  margin-top: 4rem;
   .nav-left {
     display: flex;
     align-items: center;
     .logo {
-      margin: 4rem;
+      margin-right: 1rem;
     }
     .nav-menu-items {
       display: flex;
@@ -196,20 +196,62 @@ button {
 /*** Hero ***/
 
 .hero-wrapper {
-  overflow-x: hidden;
-}
-
-.hero-text {
   h1 {
     color: $base-dark-violet;
     font-weight: 700;
     font-size: 8rem;
+    line-height: 8.5rem;
   }
-}
+  p {
+    color: $neu-gray;
+    font-weight: 500;
+    font-size: 2.2rem;
+    width: 60%;
+    padding: 1rem 0;
+  }
+  button {
+    margin: 1rem 0;
+    width: 18rem;
+    height: 5rem;
+  }
 
-.hero-banner {
-  max-height: 50rem;
-  padding-top: 5rem;
-  position: fixed;
-  right: -20px;
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .hero-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    .hero-banner {
+      overflow: hidden;
+      width: 100%;
+      transform: translateX(10rem);
+      margin-top: 0;
+    }
+    .hero-wrapper {
+      width: 100%
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .hero-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .hero-wrapper {
+      width: 75%;
+      display: flex;
+    }
+    .hero-text {
+      z-index: 2;
+      margin-top: 12rem;
+      position: fixed;
+    }
+    .hero-banner {
+      padding-top: 5rem;
+      z-index: 1;
+      position: relative;
+      transform: translateX(80%);
+      max-height: 55rem;
+    }
+  }
 }
