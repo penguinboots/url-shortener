@@ -35,7 +35,19 @@ button {
   cursor: pointer;
 }
 
-/*** Header ***/
+.btn-main {
+  width: 10rem;
+  background-color: $base-cyan;
+  color: white;
+  padding: 1rem;
+  border-radius: 3rem;
+}
+
+.btn-main:hover {
+  background-color: $base-cyan-light;
+}
+
+/*** Navbar ***/
 
 .main-nav {
   width: 70%;
@@ -46,23 +58,24 @@ button {
   align-self: center;
   justify-content: space-between;
 
-  color: var(--neu-very-blue);
+  font-weight: 600;
 
   .nav-left {
     display: flex;
     align-items: center;
-
     .logo {
       margin: 1.5rem;
     }
-
     .nav-menu-items {
       display: flex;
       align-items: center;
       font-size: 1.5rem;
-
       li {
         padding: 1.5rem;
+        color: $neu-gray;
+      }
+      li:hover {
+        color: $neu-very-violet;
       }
     }
   }
@@ -70,25 +83,21 @@ button {
   .nav-right {
     display: flex;
     align-items: center;
-
     .auth-items {
       display: flex;
       align-items: center;
       font-size: 1.5rem;
-
       li {
         padding: 1.5rem;
+        color: $neu-gray;
       }
-      .btn-main {
-        width: 10rem;
-        background-color: $base-cyan;
-        color: white;
-        padding: 1rem;
-        border-radius: 2rem;
-      }
-      .btn-main:hover {
-        background-color: $base-cyan-light;
+      li:hover {
+        color: $neu-very-violet;
       }
     }
+  }
+
+  .hamburger-react {
+    display: none;
   }
 }
