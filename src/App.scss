@@ -47,6 +47,21 @@ button {
   background-color: $base-cyan-light;
 }
 
+/** Responsive - General **/
+.app-wrapper {
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    width: 100%;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    width: 85%;
+    margin: auto;
+  }
+  @media only screen and (min-width: 1024px) {
+    width: 75%;
+    margin: auto;
+  }
+}
+
 /*** Navbar - General ***/
 
 .main-nav {
@@ -94,14 +109,13 @@ button {
     margin: 4rem;
   }
 
-  /** Navbar - Responsive **/
+  /** Navbar - Hamburger Behaviour **/
 
   @media only screen and (min-width: 320px) and (max-width: 767px) {
-    width: 100%;
     .nav-menu-items li {
       display: none;
     }
-    .nav-right .auth-items{
+    .nav-right .auth-items {
       display: none;
     }
     .hamburger-react {
@@ -109,15 +123,70 @@ button {
     }
   }
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    width: 85%;
     .hamburger-react {
       display: none;
     }
   }
   @media only screen and (min-width: 1024px) {
-    width: 75%;
     .hamburger-react {
       display: none;
     }
   }
 }
+
+/** Hamburger Menu **/
+
+.menu-window-inactive {
+  height: 0;
+  overflow: hidden;
+  transition: ease height 1s;
+}
+
+.menu-window-active {
+  height: 48rem;
+  transition: ease height 1s;
+  margin-top: 5rem;
+}
+
+.menu-window {
+  visibility: hidden;
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    visibility: visible;
+  }
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 70%;
+  margin: auto;
+  background-color: $base-dark-violet;
+  color: white;
+  border-radius: 1rem;
+
+  font-size: 2rem;
+  font-weight: 600;
+
+  .btn-main {
+    width: 80%;
+    padding: none;
+    margin: none;
+  }
+  ul {
+    padding: 2rem;
+  }
+  li {
+    padding: 2rem 0rem;
+    text-align: center;
+  }
+  li:hover {
+    color: $base-cyan-light;
+  }
+
+  hr {
+    margin: 2.5rem 0rem;
+    opacity: 50%;
+  }
+}
+
