@@ -36,7 +36,6 @@ button {
 }
 
 .btn-main {
-  width: 10rem;
   background-color: $base-cyan;
   color: white;
   padding: 1rem;
@@ -104,6 +103,9 @@ button {
         color: $neu-very-violet;
       }
     }
+    button {
+      width: 10rem;
+    }
   }
   .hamburger-react {
     margin: 4rem;
@@ -136,16 +138,17 @@ button {
 
 /** Hamburger Menu **/
 
-.menu-window-inactive {
-  height: 0;
-  overflow: hidden;
-  transition: ease height 1s;
-}
-
 .menu-window-active {
   height: 48rem;
   transition: ease height 1s;
   margin-top: 5rem;
+  overflow: hidden;
+}
+
+.menu-window-inactive {
+  height: 0;
+  overflow: hidden;
+  transition: ease height 1s;
 }
 
 .menu-window {
@@ -190,3 +193,23 @@ button {
   }
 }
 
+/*** Hero ***/
+
+.hero-wrapper {
+  overflow-x: hidden;
+}
+
+.hero-text {
+  h1 {
+    color: $base-dark-violet;
+    font-weight: 700;
+    font-size: 8rem;
+  }
+}
+
+.hero-banner {
+  max-height: 50rem;
+  padding-top: 5rem;
+  position: fixed;
+  right: -20px;
+}
