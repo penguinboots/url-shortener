@@ -14,16 +14,26 @@ export default function Nav() {
       <div className="nav-left">
         <img src={logo} className="logo" />
         <ul className="nav-menu-items">
-          <li>Features</li>
-          <li>Pricing</li>
-          <li>Resources</li>
+          <li>
+            <a href="#">Features</a>
+          </li>
+          <li>
+            <a href="#">Pricing</a>
+          </li>
+          <li>
+            <a href="#">Resources</a>
+          </li>
         </ul>
       </div>
 
       <div className="nav-right">
         <ul className="auth-items">
-          <li>Login</li>
-          <li>Sign Up</li>
+          <li>
+            <a href="#" className="btn-login">Login</a>
+          </li>
+          <li>
+            <button className="btn-signup btn-main">Sign Up</button>
+          </li>
         </ul>
         <Hamburger toggled={isOpen} toggle={toggleMenu} />
       </div>
