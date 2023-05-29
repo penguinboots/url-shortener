@@ -1,13 +1,14 @@
 import logo from "../assets/logo.svg";
 import { Squash as Hamburger } from "hamburger-react";
-import { useState } from "react";
+import PropTypes from 'prop-types';
 
-export default function Nav() {
-  const [isOpen, setOpen] = useState(false);
+export default function Nav(props) {
+  Nav.propTypes = {
+    isOpen: PropTypes.bool,
+    toggleMenu: PropTypes.func
+  }
 
-  const toggleMenu = () => {
-    setOpen((prev) => !prev);
-  };
+  const { isOpen, toggleMenu } = props;
 
   return (
     <nav className="main-nav">
