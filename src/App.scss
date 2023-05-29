@@ -1,14 +1,15 @@
 /*** Colours ***/
 
-$base-cyan: hsl(180, 66%, 49%);
-$base-dark-violet: hsl(257, 27%, 26%);
+$base-cyan: #2acfcf;
+$base-cyan-light: #71e2e2;
+$base-dark-violet: #3b3054;
 
-$sec-red: hsl(0, 87%, 67%);
+$sec-red: #f46262;
 
-$neu-gray: hsl(0, 0%, 75%);
-$neu-grayish-violet: hsl(257, 7%, 63%);
-$neu-very-blue: hsl(255, 11%, 22%);
-$neu-very-violet: hsl(260, 8%, 14%);
+$neu-gray: #bfbfbf;
+$neu-grayish-violet: #9e9aa7;
+$neu-very-blue: #35323e;
+$neu-very-violet: #232127;
 
 /*** General ***/
 
@@ -24,6 +25,13 @@ a:visited {
 
 a:hover {
   text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  font: inherit;
+  font-family: inherit;
   cursor: pointer;
 }
 
@@ -47,7 +55,7 @@ a:hover {
     .logo {
       margin: 1.5rem;
     }
-    
+
     .nav-menu-items {
       display: flex;
       align-items: center;
@@ -70,6 +78,16 @@ a:hover {
 
       li {
         padding: 1.5rem;
+      }
+      .btn-main {
+        width: 10rem;
+        background-color: $base-cyan;
+        color: white;
+        padding: 1rem;
+        border-radius: 2rem;
+      }
+      .btn-main:hover {
+        background-color: $base-cyan-light;
       }
     }
   }
