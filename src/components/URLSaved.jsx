@@ -5,16 +5,16 @@ export default function URLSaved(props) {
     urlData: PropTypes.Object,
     copyURL: PropTypes.func
   };
-  
+
   const { urlData, copyURL } = props;
 
   return (
-    <div>
-      <span className="url-left">{urlData.urlOriginal}</span>
-      <span className="url-right">
-        <span className="short-url">{urlData.urlShort}</span>
+    <div className="url-saved">
+      <div className="url-left">{urlData.urlOriginal}</div>
+      <div className="url-right">
+        <div className="short-url">{urlData.urlShort}</div>
         <button className="copy-btn">Copy</button>
-      </span>
+      </div>
     </div>
   );
 }

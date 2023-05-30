@@ -292,3 +292,19 @@ button {
     background-position: 80% 50%;
   }
 }
+
+/** URL Form **/
+.url-form-wrapper {
+  width: 50%;
+  margin: auto;
+}
+
+.url-saved-wrapper {
+  width: 50%;
+  margin: auto;
+}
+
+.url-saved {
+  display: flex;
+  justify-content: space-between;
+}
