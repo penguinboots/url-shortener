@@ -38,8 +38,8 @@ button {
 .btn-main {
   background-color: $base-cyan;
   color: white;
-  padding: 1rem;
-  border-radius: 3rem;
+  padding: 0.6rem;
+  border-radius: 1.8rem;
 }
 
 .btn-main:hover {
@@ -68,20 +68,20 @@ button {
   justify-content: space-between;
   font-weight: 600;
   margin: auto;
-  margin-top: 4rem;
+  margin-top: 2.4rem;
 
   .nav-left {
     display: flex;
     align-items: center;
     .logo {
-      margin-right: 1rem;
+      margin-right: 0.6rem;
     }
     .nav-menu-items {
       display: flex;
       align-items: center;
-      font-size: 1.5rem;
+      font-size: 1rem;
       li {
-        padding: 1.5rem;
+        padding: 1rem;
         color: $neu-gray;
       }
       li:hover {
@@ -95,9 +95,9 @@ button {
     .auth-items {
       display: flex;
       align-items: center;
-      font-size: 1.5rem;
+      font-size: 1rem;
       li {
-        padding: 1.5rem;
+        padding: 1rem;
         color: $neu-gray;
       }
       li:hover {
@@ -105,11 +105,11 @@ button {
       }
     }
     button {
-      width: 10rem;
+      width: 6rem;
     }
   }
   .hamburger-react {
-    margin: 4rem;
+    margin: 2.4rem;
   }
 
   /** Navbar - Responsive **/
@@ -117,7 +117,7 @@ button {
   @media only screen and (min-width: 320px) and (max-width: 767px) {
     margin-top: 0;
     .logo {
-      margin-left: 4rem;
+      margin-left: 2.4rem;
     }
     .nav-menu-items li {
       display: none;
@@ -146,7 +146,7 @@ button {
 .menu-window-active {
   height: 48rem;
   transition: ease height 1s;
-  margin-top: 5rem;
+  margin-top: 3rem;
   overflow: hidden;
 }
 
@@ -171,9 +171,9 @@ button {
   margin: auto;
   background-color: $base-dark-violet;
   color: white;
-  border-radius: 1rem;
+  border-radius: 0.6rem;
 
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 600;
 
   .btn-main {
@@ -182,10 +182,10 @@ button {
     margin: none;
   }
   ul {
-    padding: 2rem;
+    padding: 1.2rem;
   }
   li {
-    padding: 2rem 0rem;
+    padding: 1.2rem 0rem;
     text-align: center;
   }
   li:hover {
@@ -193,7 +193,7 @@ button {
   }
 
   hr {
-    margin: 2.5rem 0rem;
+    margin: 1.5rem 0rem;
     opacity: 50%;
   }
 }
@@ -204,25 +204,21 @@ button {
   h1 {
     color: $base-dark-violet;
     font-weight: 700;
-    font-size: 8rem;
-    line-height: 8.5rem;
+    font-size: 4.8rem;
+    line-height: 5rem;
   }
   p {
     color: $neu-gray;
     font-weight: 500;
-    font-size: 2.2rem;
+    font-size: 1.3rem;
     width: 60%;
-    padding: 1rem 0;
-  }
-  button {
-    margin: 1rem 0;
-    width: 18rem;
-    height: 5rem;
+    padding: 0.6rem 0;
   }
   @media only screen and (min-width: 320px) and (max-width: 767px) {
     display: flex;
     flex-direction: column;
     width: 100%;
+    overflow: hidden;
 
     .hero-banner {
       overflow: hidden;
@@ -232,8 +228,26 @@ button {
 
     .hero-text {
       order: 2;
+      text-align: center;
+      margin-top: 2.4rem;
+      h1 {
+        font-size: 2.7rem;
+        line-height: 3rem;
+      }
+      p {
+        width: 100%;
+        font-size: 1.2rem;
+        margin: 0.6rem 0;
+      }
+      button {
+        margin: 0.2rem 0;
+        width: 11rem;
+        height: 3rem;
+        font-size: 1.2rem;
+      }
     }
   }
+
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     display: flex;
     flex-direction: column;
@@ -241,9 +255,8 @@ button {
     margin: auto;
 
     .hero-banner {
-      overflow: hidden;
       width: 100%;
-      margin: 5rem 0;
+      margin: 3rem 0;
       order: 1;
     }
     .hero-text {
@@ -255,29 +268,36 @@ button {
 
       width: 100%;
       p {
-        margin: 2rem;
+        margin: 1.2rem;
       }
     }
     button {
-      width: 22rem;
-      height: 6rem;
-      font-size: 2.2rem;
+      width: 13.2rem;
+      height: 3.6rem;
+      font-size: 1.3rem;
     }
   }
   @media only screen and (min-width: 1024px) {
     width: 75%;
 
     .hero-text {
-      width: 80rem;
+      width: 55rem;
       z-index: 2;
-      margin-top: 12rem;
+      margin-top: 8rem;
       position: relative;
+
+      button {
+        margin: 2rem 0;
+        width: 11rem;
+        height: 3rem;
+        font-size: 1.2rem;
+      }
     }
     .hero-banner {
-      padding-top: 5rem;
+      margin-top: 10rem;
       z-index: 1;
       position: relative;
-      transform: translate(80%, -40rem);
+      transform: translate(90%, -35rem);
       max-height: 55rem;
     }
   }
