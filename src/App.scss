@@ -46,22 +46,7 @@ button {
   background-color: $base-cyan-light;
 }
 
-/** App - Responsive **/
-.app-wrapper {
-  @media only screen and (min-width: 320px) and (max-width: 767px) {
-    width: 100%;
-  }
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    width: 85%;
-    margin: auto;
-  }
-  @media only screen and (min-width: 1024px) {
-    width: 75%;
-    margin: auto;
-  }
-}
-
-/*** Navbar - General ***/
+/*** Navbar ***/
 
 .main-nav {
   display: flex;
@@ -130,11 +115,13 @@ button {
     }
   }
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    width: 85%;
     .hamburger-react {
       display: none;
     }
   }
   @media only screen and (min-width: 1024px) {
+    width: 75%;
     .hamburger-react {
       display: none;
     }
@@ -208,29 +195,28 @@ button {
     line-height: 5rem;
   }
   p {
-    color: $neu-gray;
+    color: $neu-grayish-violet;
     font-weight: 500;
     font-size: 1.3rem;
     width: 60%;
     padding: 0.6rem 0;
   }
+
+  /*** Hero - Responsive ***/
   @media only screen and (min-width: 320px) and (max-width: 767px) {
     display: flex;
     flex-direction: column;
     width: 100%;
     overflow: hidden;
-
     .hero-banner {
       overflow: hidden;
       order: 1;
-      width: 150%;
+      width: 140%;
     }
-
     .hero-text {
+      margin-top: 2.5rem;
       order: 2;
       text-align: center;
-      margin-top: 2.4rem;
-
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -252,13 +238,11 @@ button {
       }
     }
   }
-
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     display: flex;
     flex-direction: column;
     width: 85%;
     margin: auto;
-
     .hero-banner {
       width: 100%;
       margin: 3rem 0;
@@ -270,7 +254,6 @@ button {
       order: 2;
       text-align: center;
       align-items: center;
-
       width: 100%;
       p {
         margin: 1.2rem;
@@ -283,27 +266,29 @@ button {
     }
   }
   @media only screen and (min-width: 1024px) {
-    width: 75%;
+    margin-left: 12.5%;
+    background-image: url("./assets/illustration-working.svg");
+    height: 30rem;
+    background-position: 115% 80%;
+    background-repeat: no-repeat;
+    margin-top: 2rem;
 
     .hero-text {
-      width: 55rem;
+      padding-top: 5rem;
       z-index: 2;
-      margin-top: 8rem;
-      position: relative;
-
+      width: 55rem;
       button {
         margin: 2rem 0;
         width: 11rem;
-        height: 3rem;
+        height: 3.2rem;
         font-size: 1.2rem;
       }
     }
     .hero-banner {
-      margin-top: 10rem;
-      z-index: 1;
-      position: relative;
-      transform: translate(90%, -35rem);
-      max-height: 55rem;
+      display: none;
     }
+  }
+  @media only screen and (min-width: 1560px) {
+    background-position: 80% 50%;
   }
 }
