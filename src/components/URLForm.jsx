@@ -1,10 +1,20 @@
+import { useEffect } from "react";
 import { useState } from "react";
 
 export default function URLForm() {
   const SHRTCODE = "https://api.shrtco.de/v2/shorten?url=";
   const [input, setInput] = useState("");
   const [errorMessage, setErrorMessage] = useState(null);
-  const [urlData, setUrlData] = useState(null);
+  const [urlData, setUrlData] = useState([]);
+
+  function generateShortUrl(data) {
+    setUrlData((prev) => [
+      ...prev,
+      { urlOriginal: input, urlShort: data, copied: false },
+    ]);
+    setErrorMessage(null);
+    setInput("");
+  }
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -12,23 +22,20 @@ export default function URLForm() {
       .then((response) => response.json())
       .then((data) => {
         if (data.ok) {
-          console.log(data.result.short_link);
+          generateShortUrl(data.result.short_link);
         } else {
           setErrorMessage(data);
         }
       })
       .catch((error) => {
-        console.log(error);
+        setErrorMessage(error);
+        console.log(errorMessage);
       });
   }
 
-  function generateShortUrl(data) {
-    setUrlData((prev) => [
-      ... prev, { urlOriginal: input, urlShort: data, copied: false },
-    ]);
-    setErrorMessage(null);
-    setInput('');
-  }
+  useEffect(() => {
+    localStorage.setItem('urlDataLocal', JSON.stringify(urlData));
+  }, [urlData]);
 
   return (
     <div className="url-form-wrapper">
