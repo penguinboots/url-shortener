@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import URLSaved from "./URLSaved";
 
 export default function URLForm() {
   const SHRTCODE = "https://api.shrtco.de/v2/shorten?url=";
@@ -15,6 +16,8 @@ export default function URLForm() {
     setErrorMessage(null);
     setInput("");
   }
+
+  function copyURL() {}
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -34,20 +37,27 @@ export default function URLForm() {
   }
 
   useEffect(() => {
-    localStorage.setItem('urlDataLocal', JSON.stringify(urlData));
+    localStorage.setItem("urlDataLocal", JSON.stringify(urlData));
   }, [urlData]);
 
+  const savedURLs = urlData.map((url) => {
+    return <URLSaved key={url} urlData={url} copyURL={copyURL} />;
+  });
+
   return (
-    <div className="url-form-wrapper">
-      <form onSubmit={handleSubmit} className="url-form">
-        <input
-          type="text"
-          placeholder="Shorten a link here..."
-          onChange={(event) => setInput(event.target.value)}
-          name="urlForm"
-          value={input}
-        />
-      </form>
-    </div>
+    <>
+      <div className="url-form-wrapper">
+        <form onSubmit={handleSubmit} className="url-form">
+          <input
+            type="text"
+            placeholder="Shorten a link here..."
+            onChange={(event) => setInput(event.target.value)}
+            name="urlForm"
+            value={input}
+          />
+        </form>
+      </div>
+      <div className="url-saved-wrapper">{savedURLs}</div>
+    </>
   );
 }
