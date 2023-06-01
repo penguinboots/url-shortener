@@ -16,7 +16,7 @@ export default function URLForm() {
   // Add entry to urlData state
   function generateShortUrl(data) {
     setUrlData((prev) => [
-      { urlOriginal: input, urlShort: data, copied: false },
+      { id: data, urlOriginal: input, urlShort: data, copied: false },
       ...prev,
     ]);
     setErrorMessage(null);
@@ -40,8 +40,24 @@ export default function URLForm() {
     }
   }
 
-  // Copy selected short URL to clipboard
-  function copyURL() {}
+  // Copy selected short URL to clipboard, change copied bool to true for 3 seconds
+  function copyURL(urlObj) {
+    navigator.clipboard.writeText(urlObj.urlShort);
+
+    setUrlData((prev) =>
+      prev.map((urlData) =>
+        urlData.id === urlObj.id ? { ...urlData, copied: true } : urlData
+      )
+    );
+
+    setTimeout(() => {
+      setUrlData((prev) => {
+        return prev.map((urlData) =>
+          urlData.id === urlObj.id ? { ...urlData, copied: false } : urlData
+        )
+      });
+    }, 3000);
+  }
 
   // Sends request to API, adds response to local data
   function handleSubmit(event) {
@@ -68,7 +84,7 @@ export default function URLForm() {
 
   // Generate saved URLs list
   const savedURLs = urlData.map((url) => {
-    return <URLSaved key={url} urlData={url} copyURL={copyURL} />;
+    return <URLSaved key={url.urlShort} urlData={url} copyURL={copyURL} />;
   });
 
   return (
@@ -82,7 +98,7 @@ export default function URLForm() {
               onChange={(event) => setInput(event.target.value)}
               name="urlForm"
               value={input}
-              className={`${errorMessage ? 'input-error' : '' }`}
+              className={`${errorMessage ? "input-error" : ""}`}
             />
             {errorMessage && <p className="error-message">{errorMessage}</p>}
           </div>

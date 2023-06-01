@@ -14,7 +14,7 @@ export default function URLSaved(props) {
       <hr/>
       <div className="url-right">
         <div className="short-url">https://{urlData.urlShort}</div>
-        <button className="btn-main">Copy</button>
+        <button className="btn-main" onClick={() => copyURL(urlData)}>{urlData.copied ? 'Copied!' : 'Copy' }</button>
       </div>
     </div>
   );
