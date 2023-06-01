@@ -429,6 +429,7 @@ button {
   align-items: center;
   margin-top: 6.5rem;
   margin-bottom: 5rem;
+
   hr {
     display: none;
   }
@@ -447,9 +448,15 @@ button {
 
     font-size: 1.3rem;
     .url-left {
+      width: 50%;
       display: flex;
       align-items: center;
       color: $base-dark-violet;
+      span {
+        width: 95%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
     .url-right {
       display: flex;
@@ -467,6 +474,9 @@ button {
       }
       .short-url {
         color: $base-cyan;
+        width: 95%;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .btn-copied {
         background-color: $base-dark-violet;
@@ -496,6 +506,11 @@ button {
       .url-left {
         width: 100%;
         margin: 0.6rem 0;
+        span {
+          width: 95%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
       }
       .url-right {
         flex-direction: column;
@@ -515,6 +530,25 @@ button {
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .url-saved {
       width: 90%;
+      .url-left {
+        width: 50%;
+        span {
+          width: 95%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+      .url-right {
+        width: 50%;
+        .short-url {
+          width: 60%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .button {
+          width: 50%;
+        }
+      }
     }
   }
 }

@@ -10,7 +10,9 @@ export default function URLSaved(props) {
 
   return (
     <div className="url-saved">
-      <div className="url-left">{urlData.urlOriginal}</div>
+      <div className="url-left">
+        <span>{urlData.urlOriginal}</span>
+      </div>
       <hr />
       <div className="url-right">
         <div className="short-url">https://{urlData.urlShort}</div>
