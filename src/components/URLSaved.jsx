@@ -12,8 +12,8 @@ export default function URLSaved(props) {
     <div className="url-saved">
       <div className="url-left">{urlData.urlOriginal}</div>
       <div className="url-right">
-        <div className="short-url">{urlData.urlShort}</div>
-        <button className="copy-btn">Copy</button>
+        <div className="short-url">https://{urlData.urlShort}</div>
+        <button className="btn-main copy-btn">Copy</button>
       </div>
     </div>
   );
