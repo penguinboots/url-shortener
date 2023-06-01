@@ -6,6 +6,7 @@ import { useState } from "react";
 import Menu from './components/Menu';
 import URLForm from './components/URLForm';
 import Features from './components/Features';
+import CallToAction from './components/CallToAction';
 
 function App() {
 
@@ -22,8 +23,8 @@ function App() {
       <Hero />
       <URLForm />
       <Features />
-      {/* <CallToAction />
-      <Footer /> */}
+      <CallToAction />
+      {/* <Footer /> */}
     </div>
   );
 }

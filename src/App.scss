@@ -702,3 +702,29 @@ button {
     }
   }
 }
+
+/** Call to Action **/
+
+.call-to-action {
+  background-image: url("./assets/bg-boost-desktop.svg");
+  background-color: $base-dark-violet;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0 4rem 0;
+
+  h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin: 2rem;
+  }
+  button {
+    width: 12rem;
+    height: 3.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+}
