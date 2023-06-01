@@ -7,8 +7,7 @@ This is a solution to the [Shortly URL shortening API Challenge challenge on Fro
 
 ## Final Product
 ### Responsive Design
-Desktop View
-![Desktop view](/docs/view-desktop-partial.png)
+Desktop View ([full view here](/docs/view-desktop-full.png))
 
 Shortening URLs
 ![Submit URL for shortening](/docs/create-url.gif)
