@@ -13,6 +13,9 @@ export default function Features() {
           statistics dashboard.
         </p>
       </div>
+      <div className="line-deco">
+        <hr />
+      </div>
       <div className="cards-container">
         <Card
           icon={iconBrandRecognition}
