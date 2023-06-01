@@ -859,10 +859,19 @@ button {
       }
       .footer-nav-item {
         padding: 0.5rem 0;
+        a:hover {
+          color: $base-cyan;
+        }
       }
     }
     .socials-container {
       width: 18%;
+      a {
+        fill: $neu-off-white;
+      }
+      a:hover {
+        fill: $base-cyan;
+      }
     }
   }
 }
