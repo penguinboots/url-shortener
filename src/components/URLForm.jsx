@@ -55,6 +55,9 @@ export default function URLForm() {
             name="urlForm"
             value={input}
           />
+          <button className="btn-main">
+            Shorten It!
+          </button>
         </form>
       </div>
       <div className="url-saved-wrapper">{savedURLs}</div>
