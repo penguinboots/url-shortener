@@ -452,15 +452,21 @@ button {
       align-items: center;
       button {
         height: 2.5rem;
+        width: 6.5rem;
         border-radius: 0.3rem;
+
         font-size: 0.7em;
         font-weight: 700;
         line-height: 1rem;
-        padding: 0rem 2rem;
+        padding: 0rem;
         margin-left: 1.5rem;
       }
       .short-url {
         color: $base-cyan;
+      }
+      .btn-copied {
+        background-color: $base-dark-violet;
+        width: 6.5rem;
       }
     }
   }
