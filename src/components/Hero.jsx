@@ -2,7 +2,7 @@ import heroBanner from "../assets/illustration-working.svg";
 
 export default function Hero() {
   return (
-    <div className="hero-wrapper">
+    <div className="hero-container">
       <div className="hero-text">
         <h1>More than just</h1>
         <h1>shorter links</h1>

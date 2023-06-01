@@ -188,7 +188,7 @@ button {
 
 /*** Hero ***/
 
-.hero-wrapper {
+.hero-container {
   margin-bottom: 10rem;
   h1 {
     color: $base-dark-violet;
@@ -298,12 +298,12 @@ button {
 
 /** URL Form **/
 
-.url-app-wrapper {
+.url-app-container {
   background-color: $neu-off-white;
   display: flex;
   flex-direction: column;
 }
-.url-form-wrapper {
+.url-form-container {
   width: 75%;
   margin: auto;
   margin-top: 4rem;
@@ -420,7 +420,7 @@ button {
 }
 
 /** Saved URLs **/
-.url-saved-wrapper {
+.url-saved-container {
   display: flex;
   flex-direction: column;
   align-items: center;

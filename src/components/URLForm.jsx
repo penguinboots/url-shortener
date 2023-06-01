@@ -88,8 +88,8 @@ export default function URLForm() {
   });
 
   return (
-    <main className="url-app-wrapper">
-      <div className="url-form-wrapper">
+    <main className="url-app-container">
+      <div className="url-form-container">
         <form onSubmit={handleSubmit} className="url-form">
           <div className="form-left">
             <input
@@ -105,7 +105,7 @@ export default function URLForm() {
           <button className="btn-main">Shorten It!</button>
         </form>
       </div>
-      <div className="url-saved-wrapper">{savedURLs}</div>
+      <div className="url-saved-container">{savedURLs}</div>
     </main>
   );
 }
