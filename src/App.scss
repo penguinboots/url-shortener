@@ -295,8 +295,110 @@ button {
 
 /** URL Form **/
 .url-form-wrapper {
-  width: 50%;
+  width: 75%;
   margin: auto;
+  margin-top: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("./assets/bg-shorten-desktop.svg");
+  background-size: cover;
+  background-color: $base-dark-violet;
+
+  border-radius: 0.5rem;
+
+  height: 11rem;
+
+  .url-form {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .form-left {
+      width: 79%;
+      margin-right: 2%;
+      input {
+        border: none;
+        height: 4rem;
+        width: 100%;
+        border-radius: 0.7rem;
+
+        font-size: 1.2rem;
+        color: $neu-grayish-violet;
+        padding-left: 1.5rem;
+      }
+    }
+    input:focus {
+      outline: none;
+    }
+    input::placeholder {
+      color: $neu-grayish-violet;
+    }
+    button {
+      border-radius: 0.7rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      width: 20%;
+      height: 4rem;
+    }
+  }
+  .error-message {
+    color: $sec-red;
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1rem;
+  }
+  @media only screen and (min-width: 768px) {
+    .error-message {
+      align-self: flex-start;
+      margin-top: 0.5rem;
+      margin-bottom: -1.5rem;
+    }
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    width: 90%;
+    height: 11rem;
+
+    background-image: url("./assets/bg-shorten-mobile.svg");
+    background-size: cover;
+  
+    .url-form {
+      flex-direction: column;
+      align-items: center;
+      .form-left {
+        margin: auto;
+        width: 95%;
+        margin-bottom: 1rem;
+        input {
+          width: 100%;
+          border-radius: 0.4rem;
+          height: 3.5rem;
+        }
+        .error-message {
+          padding: 0.5rem 0;
+          margin-bottom: -1rem;
+        }
+      }
+      button {
+        height: 3.5rem;
+        width: 95%;
+        border-radius: 0.4rem;
+      }
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    width: 90%;
+    input {
+      height: 3.5rem;
+    }
+    button {
+      height: 3.5rem;
+    }
+  }
 }
 
 .url-saved-wrapper {
@@ -307,4 +409,8 @@ button {
 .url-saved {
   display: flex;
   justify-content: space-between;
+
+  .url-right {
+    display: flex;
+  }
 }
