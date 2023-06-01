@@ -851,6 +851,9 @@ button {
       justify-content: space-around;
       text-align: left;
       width: 50%;
+      .footer-col {
+        width: 33%;
+      }
       .footer-col-title {
         margin: 0.5rem 0 1rem 0;
       }
