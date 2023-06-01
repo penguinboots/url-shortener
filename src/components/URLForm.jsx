@@ -16,8 +16,8 @@ export default function URLForm() {
   // Add entry to urlData state
   function generateShortUrl(data) {
     setUrlData((prev) => [
-      ...prev,
       { urlOriginal: input, urlShort: data, copied: false },
+      ...prev,
     ]);
     setErrorMessage(null);
     setInput("");
