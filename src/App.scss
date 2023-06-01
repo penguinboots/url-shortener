@@ -330,12 +330,16 @@ button {
         color: $neu-grayish-violet;
         padding-left: 1.5rem;
       }
-    }
-    input:focus {
-      outline: none;
-    }
-    input::placeholder {
-      color: $neu-grayish-violet;
+      .input-error {
+        border: 3px solid $sec-red;
+      }
+      input:focus {
+        border: 3px solid $base-cyan-light;
+        outline: none;
+      }
+      input::placeholder {
+        color: $neu-grayish-violet;
+      }
     }
     button {
       border-radius: 0.7rem;
@@ -351,6 +355,7 @@ button {
     font-style: italic;
     line-height: 1rem;
   }
+
   @media only screen and (min-width: 768px) {
     .error-message {
       align-self: flex-start;
@@ -365,7 +370,7 @@ button {
 
     background-image: url("./assets/bg-shorten-mobile.svg");
     background-size: cover;
-  
+
     .url-form {
       flex-direction: column;
       align-items: center;

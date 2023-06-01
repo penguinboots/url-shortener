@@ -82,6 +82,7 @@ export default function URLForm() {
               onChange={(event) => setInput(event.target.value)}
               name="urlForm"
               value={input}
+              className={`${errorMessage ? 'input-error' : '' }`}
             />
             {errorMessage && <p className="error-message">{errorMessage}</p>}
           </div>
