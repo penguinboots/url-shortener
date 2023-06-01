@@ -719,12 +719,111 @@ button {
   h2 {
     color: white;
     font-size: 2.5rem;
-    margin: 2rem;
+    margin: 2rem auto;
   }
   button {
     width: 12rem;
     height: 3.5rem;
     font-size: 1.2rem;
     font-weight: 700;
+  }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    justify-content: center;
+    background-size: cover;
+    height: 20rem;
+    padding: 2rem 0;
+    h2 {
+      font-size: 1.7rem;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  }
+}
+
+/** Footer **/
+
+.footer-container {
+  background-color: $neu-very-violet;
+  color: $neu-off-white;
+  display: flex;
+  text-align: center;
+
+  .footer-nav {
+    font-size: 1rem;
+    .footer-col {
+      .footer-nav-item {
+        font-weight: 500;
+        color: $neu-grayish-violet;
+      }
+    }
+  }
+  .socials-container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+    .footer-col-title {
+      padding: 1rem;
+    }
+    .footer-nav-item {
+      padding: 0.5rem;
+    }
+    .socials-container {
+      margin: 3rem 0;
+      width: 50%;
+    }
+    .logo {
+      margin: 4rem 0 2rem 0;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    padding: 3rem 5%;
+    justify-content: space-around;
+    .logo {
+      margin-right: 5rem;
+    }
+    .footer-nav {
+      display: flex;
+      justify-content: space-around;
+      text-align: left;
+      width: 50%;
+      .footer-col {
+        width: 33%;
+      }
+      .footer-col-title {
+        margin: 0.5rem 0 0.7rem 0;
+      }
+      .footer-nav-item {
+        padding: 0.3rem 0;
+      }
+    }
+    .socials-container {
+      width: 18%;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    padding: 4rem 12.5%;
+    justify-content: space-around;
+    .logo {
+      margin-right: 15rem;
+    }
+    .footer-nav {
+      display: flex;
+      justify-content: space-around;
+      text-align: left;
+      width: 50%;
+      .footer-col-title {
+        margin: 0.5rem 0 1rem 0;
+      }
+      .footer-nav-item {
+        padding: 0.5rem 0;
+      }
+    }
+    .socials-container {
+      width: 18%;
+    }
   }
 }
