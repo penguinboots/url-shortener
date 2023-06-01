@@ -5,18 +5,17 @@ export default function Card(props) {
     icon: PropTypes.string,
     heading: PropTypes.string,
     body: PropTypes.string,
-  }
+  };
 
   const { icon, heading, body } = props;
 
   return (
-    <div className="card-container">
-      <img
-        className="info-icon"
-        src={icon}
-      />
+    <div className="card">
+      <div className="icon-wrapper">
+        <img src={icon} />
+      </div>
       <h3>{heading}</h3>
       <p>{body}</p>
     </div>
-  )
+  );
 }
