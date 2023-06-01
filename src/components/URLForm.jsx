@@ -72,7 +72,7 @@ export default function URLForm() {
   });
 
   return (
-    <>
+    <main className="url-app-wrapper">
       <div className="url-form-wrapper">
         <form onSubmit={handleSubmit} className="url-form">
           <div className="form-left">
@@ -90,6 +90,6 @@ export default function URLForm() {
         </form>
       </div>
       <div className="url-saved-wrapper">{savedURLs}</div>
-    </>
+    </main>
   );
 }

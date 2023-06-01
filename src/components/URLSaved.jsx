@@ -13,7 +13,7 @@ export default function URLSaved(props) {
       <div className="url-left">{urlData.urlOriginal}</div>
       <div className="url-right">
         <div className="short-url">https://{urlData.urlShort}</div>
-        <button className="btn-main copy-btn">Copy</button>
+        <button className="btn-main">Copy</button>
       </div>
     </div>
   );

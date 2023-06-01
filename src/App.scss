@@ -6,6 +6,7 @@ $base-dark-violet: #3b3054;
 
 $sec-red: #f46262;
 
+$neu-off-white: #eff1f6;
 $neu-gray: #bfbfbf;
 $neu-grayish-violet: #9e9aa7;
 $neu-very-blue: #35323e;
@@ -188,6 +189,7 @@ button {
 /*** Hero ***/
 
 .hero-wrapper {
+  margin-bottom: 10rem;
   h1 {
     color: $base-dark-violet;
     font-weight: 700;
@@ -294,15 +296,23 @@ button {
 }
 
 /** URL Form **/
+
+.url-app-wrapper {
+  background-color: $neu-off-white;
+  display: flex;
+  flex-direction: column;
+}
 .url-form-wrapper {
   width: 75%;
   margin: auto;
   margin-top: 4rem;
 
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  align-self: center;
 
   background-image: url("./assets/bg-shorten-desktop.svg");
   background-size: cover;
@@ -311,6 +321,9 @@ button {
   border-radius: 0.5rem;
 
   height: 11rem;
+
+  position: absolute;
+  transform: translateY(-85%);
 
   .url-form {
     width: 90%;
@@ -407,15 +420,44 @@ button {
 }
 
 .url-saved-wrapper {
-  width: 50%;
-  margin: auto;
-}
-
-.url-saved {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6rem;
 
-  .url-right {
+  .url-saved {
+    width: 75%;
+    margin: auto;
     display: flex;
+    justify-content: space-between;
+    
+    height: 5rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem 2rem;
+
+    border-radius: 0.5rem;
+    background-color: white;
+
+    font-size: 1.3rem;
+    .url-left {
+      display: flex;
+      align-items: center;
+    }
+    .url-right {
+      display: flex;
+      align-items: center;
+      button {
+        height: 2.5rem;
+        border-radius: 0.3rem;
+        font-size: 0.7em;
+        font-weight: 700;
+        line-height: 1rem;
+        padding: 0rem 2rem;
+        margin-left: 1.5rem;
+      }
+      .short-url {
+        color: $base-cyan;
+      }
+    }
   }
 }
