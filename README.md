@@ -30,5 +30,9 @@ Users should be able to:
   - The `input` field is empty
 
 ### Built with
-- [React](https://reactjs.org/) - JS library
+- [React](https://reactjs.org/)
 - [Vite](https://vitejs.dev/)
+- [Sass](https://sass-lang.com/)
+
+### Notes
+- [CSS Reset by Andy Bell](https://andy-bell.co.uk/a-modern-css-reset/)
