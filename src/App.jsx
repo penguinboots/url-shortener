@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import { useState } from "react";
 import Menu from './components/Menu';
 import URLForm from './components/URLForm';
+import Features from './components/Features';
 
 function App() {
 
@@ -20,8 +21,8 @@ function App() {
       <Menu isOpen={isOpen} />
       <Hero />
       <URLForm />
-      {/* <Features />
-      <CallToAction />
+      <Features />
+      {/* <CallToAction />
       <Footer /> */}
     </div>
   );
