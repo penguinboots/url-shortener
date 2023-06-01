@@ -383,7 +383,9 @@ button {
     height: 11rem;
 
     background-image: url("./assets/bg-shorten-mobile.svg");
-    background-size: cover;
+    background-size: 75%;
+    background-position: right top;
+    background-repeat: no-repeat;
 
     .url-form {
       flex-direction: column;
