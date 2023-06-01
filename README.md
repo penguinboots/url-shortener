@@ -2,20 +2,24 @@
 
 This is a solution to the [Shortly URL shortening API Challenge challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G).
 
-- Live Site URL: [Shortly](https://shortly-url-shortener-five.vercel.app/)
+## Live Site
+[Check it out! 🌸](https://shortly-url-shortener-five.vercel.app/)
 
 ## Final Product
 ### Responsive Design
 Desktop View
 ![Desktop view](/docs/view-desktop-partial.png)
+
 Shortening URLs
 ![Submit URL for shortening](/docs/create-url.gif)
-Mobile View ([full view](/docs/view-iphone-se-full.png))
-![iPhone SE partial view](/docs/view-iphone-se-partial.png)
+
+Mobile View ([full view here](/docs/view-iphone-se-full.png))
+
 Hamburger Menu
+
 ![Hamburger menu](/docs/hamburger-menu.gif)
-Tablet View ([full view](/docs/view-ipad-air-full.png))
-![iPad Air partial view](/docs/view-ipad-air-partial.png)
+
+Tablet View ([full view here](/docs/view-ipad-air-full.png))
 
 ## The Challenge
 Users should be able to:
