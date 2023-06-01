@@ -7,6 +7,7 @@ import Menu from './components/Menu';
 import URLForm from './components/URLForm';
 import Features from './components/Features';
 import CallToAction from './components/CallToAction';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -24,7 +25,7 @@ function App() {
       <URLForm />
       <Features />
       <CallToAction />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
