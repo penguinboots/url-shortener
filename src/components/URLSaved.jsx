@@ -11,6 +11,7 @@ export default function URLSaved(props) {
   return (
     <div className="url-saved">
       <div className="url-left">{urlData.urlOriginal}</div>
+      <hr/>
       <div className="url-right">
         <div className="short-url">https://{urlData.urlShort}</div>
         <button className="btn-main">Copy</button>
